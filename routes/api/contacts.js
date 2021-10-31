@@ -16,3 +16,9 @@ router.delete('/:contactId', controllerWrapper(ctrl.removeById))
 router.put('/:contactId', validator(contactsSchema), controllerWrapper(ctrl.updateById))
 
 module.exports = router
+
+router.patch('/:contactId', async (req, res, next) => {
+  res.json({ message: 'template message' })
+})
+
+module.exports = router
